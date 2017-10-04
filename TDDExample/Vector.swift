@@ -16,6 +16,17 @@ struct Vector {
     func add(_ vector: Vector) -> Vector {
         return Vector(x: self.x + vector.x, y: self.y + vector.y, z: self.z + vector.z)
     }
+    
+    func point(_ vector: Vector) -> Int {
+        return (self.x * vector.x) + (self.y * vector.y) + (self.z * vector.z)
+    }
+    
+    func cross(_ vector: Vector) -> Vector {
+        let i = (self.y * vector.z) - (self.z * vector.y)
+        let j = -1 * ( (self.x * vector.z) - (self.z * vector.x) )
+        let k = (self.x * vector.y) - (self.y * vector.x)
+        return Vector(x: i, y: j, z: k)
+    }
 }
 
 extension Vector: Equatable {}
