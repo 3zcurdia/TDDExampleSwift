@@ -36,6 +36,13 @@ class VectorTests: XCTestCase {
         let vectB = Vector(x: 1, y: 0, z: 1)
         XCTAssertEqual(4, vectA.point(normalYZ))
         XCTAssertEqual(10, vectA.point(vectB))
+    }
+    
+    func testCross() {
+        let vectA = Vector(x: 8, y: 4, z: 2)
+        let vectB = Vector(x: 1, y: 1, z: 1)
+        let expected = Vector(x: 2, y: -6, z: 4)
+        XCTAssertEqual(expected, vectA.cross(vectB))
 
     }
     
