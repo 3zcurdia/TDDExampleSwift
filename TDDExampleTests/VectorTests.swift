@@ -9,21 +9,24 @@
 import XCTest
 @testable import TDDExample
 
-class TDDExampleTests: XCTestCase {
+class VectorTests: XCTestCase {
+    
+    let normalYZ = Vector(x: 1, y: 0, z: 0)
+    let normalXZ = Vector(x: 0, y: 1, z: 0)
+    let normalXY = Vector(x: 0, y: 0, z: 1)
+
+    let normalXYZ = Vector(x: 1, y: 1, z: 1)
     
     override func setUp() {
         super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
     }
     
     override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
         super.tearDown()
     }
     
     func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+        XCTAssertEqual(normalXYZ, normalYZ.add(normalXZ).add(normalYZ))
     }
     
     func testPerformanceExample() {
