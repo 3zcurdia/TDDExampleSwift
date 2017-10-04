@@ -12,4 +12,8 @@ struct Vector {
     let x : Int
     let y : Int
     let z : Int
+    
+    func add(_ vector: Vector) -> Vector {
+        return Vector(x: self.x + vector.x, y: self.y + vector.y, z: self.z + vector.z)
+    }
 }
