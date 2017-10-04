@@ -10,12 +10,10 @@ import XCTest
 @testable import TDDExample
 
 class VectorTests: XCTestCase {
-    
     let normalYZ = Vector(x: 1, y: 0, z: 0)
     let normalXZ = Vector(x: 0, y: 1, z: 0)
     let normalXY = Vector(x: 0, y: 0, z: 1)
 
-    
     override func setUp() {
         super.setUp()
     }
@@ -24,13 +22,21 @@ class VectorTests: XCTestCase {
         super.tearDown()
     }
     
-    func testExample() {
+    func testAdd() {
         let expected = Vector(x: 1, y: 1, z: 0)
         let result  = normalYZ.add(normalXZ)
         XCTAssertEqual(expected.x, result.x)
         XCTAssertEqual(expected.y, result.y)
         XCTAssertEqual(expected.z, result.z)
         XCTAssertEqual(expected, result)
+    }
+    
+    func testPoint() {
+        let vectA = Vector(x: 4, y: 5, z: 6)
+        let vectB = Vector(x: 1, y: 0, z: 1)
+        XCTAssertEqual(4, vectA.point(normalYZ))
+        XCTAssertEqual(10, vectA.point(vectB))
+
     }
     
     func testPerformanceExample() {
