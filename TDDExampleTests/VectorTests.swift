@@ -30,6 +30,7 @@ class VectorTests: XCTestCase {
         XCTAssertEqual(expected.x, result.x)
         XCTAssertEqual(expected.y, result.y)
         XCTAssertEqual(expected.z, result.z)
+        XCTAssertEqual(expected, result)
     }
     
     func testPerformanceExample() {

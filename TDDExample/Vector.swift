@@ -17,3 +17,9 @@ struct Vector {
         return Vector(x: self.x + vector.x, y: self.y + vector.y, z: self.z + vector.z)
     }
 }
+
+extension Vector: Equatable {}
+
+func ==(left: Vector, right: Vector) -> Bool {
+    return left.x == right.x && left.y == right.y && left.z == right.z
+}
