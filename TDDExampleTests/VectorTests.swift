@@ -15,7 +15,6 @@ class VectorTests: XCTestCase {
     let normalXZ = Vector(x: 0, y: 1, z: 0)
     let normalXY = Vector(x: 0, y: 0, z: 1)
 
-    let normalXYZ = Vector(x: 1, y: 1, z: 1)
     
     override func setUp() {
         super.setUp()
@@ -26,7 +25,11 @@ class VectorTests: XCTestCase {
     }
     
     func testExample() {
-        XCTAssertEqual(normalXYZ, normalYZ.add(normalXZ).add(normalYZ))
+        let expected = Vector(x: 1, y: 1, z: 0)
+        let result  = normalYZ.add(normalXZ)
+        XCTAssertEqual(expected.x, result.x)
+        XCTAssertEqual(expected.y, result.y)
+        XCTAssertEqual(expected.z, result.z)
     }
     
     func testPerformanceExample() {
