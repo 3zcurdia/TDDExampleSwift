@@ -27,6 +27,14 @@ struct Vector {
         let k = (self.x * vector.y) - (self.y * vector.x)
         return Vector(x: i, y: j, z: k)
     }
+    
+    func module2() -> Int {
+        return self.x * self.x + self.y * self.y + self.z * self.z
+    }
+    
+    func module() -> Double {
+        return Double(module2()).squareRoot()
+    }
 }
 
 extension Vector: Equatable {}
