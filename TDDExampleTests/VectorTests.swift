@@ -45,8 +45,10 @@ class VectorTests: XCTestCase {
 
     func testModule2() {
         let vectorA = Vector(x: 8, y: 4, z: 2)
-        XCTAssertEqual(84, vectorA.module2())
-        XCTAssertEqual(1, normalYZ.module2())
+        XCTAssertEqual(84, vectorA.moduleSquare())
+        XCTAssertEqual(1, normalYZ.moduleSquare())
+        XCTAssertEqual(1, normalXY.moduleSquare())
+        XCTAssertEqual(1, normalXZ.moduleSquare())
     }
 
     func testModule() {
