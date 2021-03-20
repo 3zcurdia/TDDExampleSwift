@@ -1,4 +1,4 @@
 # TDDExampleSwift
-[![Build Status](https://travis-ci.org/iOSLabUNAM/TDDExampleSwift.svg?branch=master)](https://travis-ci.org/iOSLabUNAM/TDDExampleSwift)
+[![Build & test](https://github.com/iOSLabUNAM/TDDExampleSwift/actions/workflows/swift.yml/badge.svg?branch=master)](https://github.com/iOSLabUNAM/TDDExampleSwift/actions/workflows/swift.yml)
 
 TDD Example with swift
