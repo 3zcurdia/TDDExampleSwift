@@ -35,6 +35,13 @@ struct Vector {
     func module() -> Double {
         return Double(moduleSquare()).squareRoot()
     }
+
+    func normalize() -> Vector {
+        let mod = self.module()
+        return Vector(x: Int(Double(self.x)/mod),
+                      y: Int(Double(self.y)/mod),
+                      z: Int(Double(self.z)/mod))
+    }
 }
 
 extension Vector: Equatable {}

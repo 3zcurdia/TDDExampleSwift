@@ -59,6 +59,11 @@ class VectorTests: XCTestCase {
         XCTAssertEqual(1, normalXZ.module())
     }
 
+    func testNormalize() {
+        let vectorA = Vector(x: 3, y: 0, z: 0)
+        XCTAssertEqual(normalYZ, vectorA.normalize())
+    }
+
     func testEquality() {
         let vectorA = Vector(x: 0, y: 0, z: 0)
         let vectorB = Vector(x: 0, y: 0, z: 0)
